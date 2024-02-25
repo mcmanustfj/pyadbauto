@@ -1,0 +1,28 @@
+[project]
+name = "pyadbauto"
+version = "0.1"
+description = "Python module to automate android GUIs over ADB"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "Thomas McManus"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/mcmanustfj/pyadbauto"
+Changelog = "https://github.com/mcmanustfj/pyadbauto/releases"
+Issues = "https://github.com/mcmanustfj/pyadbauto/issues"
+CI = "https://github.com/mcmanustfj/pyadbauto/actions"
+
+
+[project.optional-dependencies]
+test = ["pytest"]
