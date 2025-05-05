@@ -3,19 +3,17 @@ name = "pyadbauto"
 version = "0.1"
 description = "Python module to automate android GUIs over ADB"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = "~=3.10"
 authors = [{name = "Thomas McManus"}]
 license = {text = "Apache-2.0"}
 classifiers = [
     "License :: OSI Approved :: Apache Software License"
 ]
 dependencies = [
-
+     "opencv-python>=4.11.0.86",
+     "scrcpy-client @ git+https://github.com/xuzheliang135/py-scrcpy-client.git@v0.5.0",
+     "setuptools>=80.3.1",
 ]
-
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
 
 [project.urls]
 Homepage = "https://github.com/mcmanustfj/pyadbauto"
@@ -26,3 +24,12 @@ CI = "https://github.com/mcmanustfj/pyadbauto/actions"
 
 [project.optional-dependencies]
 test = ["pytest"]
+
+[dependency-groups]
+dev = [
+    "ipdb>=0.13.13",
+    "ipykernel>=6.29.5",
+]
+
+[tool.uv]
+override-dependencies = ["adbutils==2.7.2"]
